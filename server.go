@@ -89,8 +89,8 @@ func main() {
 	http.HandleFunc("/verify", verify)
 	http.HandleFunc("/upload", uploadPage)
 
-	fmt.Println("Server listening at port 5000")
-	http.ListenAndServe(":5000", context.ClearHandler(http.DefaultServeMux))
+	fmt.Println("Server listening at port 80")
+	http.ListenAndServe(":80", context.ClearHandler(http.DefaultServeMux))
 	// using context.ClearHandler(http.DefaultServeMux) instead of nil to avoid memory leak
 }
 
